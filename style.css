@@ -1,0 +1,200 @@
+
+/* =========================
+   GENERAL SETTINGS
+========================= */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(135deg, #fff0f5, #ffe4ec);
+    color: #702044;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+header {
+    width: 100%;
+    min-height: 110px;
+    background: linear-gradient(120deg, #ff9ebc, #e75480);
+    text-align: center;
+    padding: 30px 10px;
+    color: white;
+    box-shadow: 0 5px 15px #d66b8b66;
+}
+
+header h1 {
+    font-size: 30px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 2px 3px 5px #9b3158;
+    transition: 0.4s;
+}
+
+header h1:hover {
+    transform: scale(1.08);
+}
+
+/* =========================
+   ASIDE
+========================= */
+
+aside {
+    width: 22%;
+    min-height: 500px;
+    float: left;
+    background: linear-gradient(180deg, #e75480, #ad1457);
+    padding: 25px 15px;
+    box-shadow: 4px 0 12px #00000020;
+}
+
+/* =========================
+   NAVIGATION
+========================= */
+
+nav a {
+    display: block;
+    text-decoration: none;
+    color: #ad1457;
+    background-color: white;
+    padding: 15px;
+    margin: 15px 0;
+    text-align: center;
+    font-weight: bold;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px #00000020;
+    transition: 0.4s;
+}
+
+nav a:hover {
+    background-color: #ffb6c9;
+    color: white;
+    transform: translateX(8px);
+    box-shadow: 0 6px 15px #00000030;
+}
+
+/* =========================
+   MAIN
+========================= */
+
+main {
+    width: 78%;
+    min-height: 500px;
+    float: right;
+    padding: 30px;
+    text-align: center;
+}
+
+/* =========================
+   SECTION
+========================= */
+
+section {
+    width: 100%;
+    height: 440px;
+    background: white;
+    padding: 15px;
+    border-radius: 25px;
+    box-shadow: 0 8px 25px #d66b8b55;
+    overflow: hidden;
+    transition: 0.4s;
+}
+
+section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px #d66b8b88;
+}
+
+/* =========================
+   IMAGE
+========================= */
+
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 18px;
+    transition: 0.6s;
+}
+
+img:hover {
+    transform: scale(1.04);
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    clear: both;
+    width: 100%;
+    min-height: 80px;
+    background: linear-gradient(120deg, #e75480, #ff9ebc);
+    color: white;
+    text-align: center;
+    padding: 25px;
+    box-shadow: 0 -5px 15px #d66b8b44;
+}
+
+footer h1,
+footer h2 {
+    font-size: 22px;
+    text-shadow: 2px 2px 4px #9b3158;
+}
+
+/* =========================
+   ANIMATIONS
+========================= */
+
+@keyframes appear {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+header, aside, main, footer {
+    animation: appear 1s ease;
+}
+
+/* =========================
+   RESPONSIVE DESIGN
+========================= */
+
+@media screen and (max-width: 700px) {
+
+    aside {
+        width: 100%;
+        min-height: auto;
+        float: none;
+    }
+
+    main {
+        width: 100%;
+        float: none;
+        padding: 15px;
+    }
+
+    section {
+        height: 350px;
+    }
+
+    header h1 {
+        font-size: 22px;
+    }
+
+    footer {
+        padding: 20px;
+    }
+}
